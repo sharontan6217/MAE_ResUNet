@@ -22,7 +22,7 @@ You will find the following folders after the setup.
 - /audios -- Original source audios of 10 urban sound types.
 - /metadata.csv  -- The metadata file to list the generated mixed audio and the used source audios.
 - tagging  -- The agent to classify the source audios from the loaded mixed audios with MAE based M2D pretrained framework.
-- separator  -- The agent to separate the audio with ResUNet30.
+- separator  -- The agent to separate the audio with ResUNet.
 - output   -- The separated audios from the mixed audios.
 - evaluation -- The evaluation metrics between source audios constructing the mixed audios with the separated audios from the mixed audios.
 
