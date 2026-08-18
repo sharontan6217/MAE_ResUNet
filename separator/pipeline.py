@@ -6,7 +6,7 @@ import librosa
 from scipy.io.wavfile import write
 import utils
 from utils import ignore_warnings, parse_yaml, load_ss_model
-from seperator.models.clap_encoder import CLAP_Encoder
+from separator.models.clap_encoder import CLAP_Encoder
 
 def build_audiosep(config_yaml, checkpoint_path, device):
     ignore_warnings()

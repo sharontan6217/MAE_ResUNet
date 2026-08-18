@@ -17,9 +17,9 @@ import numpy as np
 import torch
 import torch.nn as nn
 import yaml
-import seperator
-from seperator import models
-from seperator.models.audiosep import AudioSep, get_model_class
+import separator
+from separator import models
+from separator.models.audiosep import AudioSep, get_model_class
 
 class utils():
     def metaLoad(meta_path):

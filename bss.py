@@ -17,8 +17,8 @@ from IPython.display import display, Audio
 from sentence_transformers import SentenceTransformer
 import tagging
 from tagging.portable_m2d import PortableM2D
-import seperator
-from seperator.pipeline import build_audiosep, separate_audio
+import separator
+from separator.pipeline import build_audiosep, separate_audio
 import utils
 import argparse
 import yaml
@@ -342,7 +342,7 @@ if __name__ == "__main__":
       df_representation.to_csv(tagging_path)
       model = build_audiosep(
             config_yaml='config/bss_base.yaml',
-            checkpoint_path="seperator/checkpoint/audiosep_base_4M_steps.ckpt",
+            checkpoint_path="separator/checkpoint/audiosep_base_4M_steps.ckpt",
             device=device)
       audio_files,topk_classes = bss.loadData(tagging_path)
       output_file = bss.audioSeparate(model,audio_files,topk_classes,output_dir)

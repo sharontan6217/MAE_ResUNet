@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.optim.lr_scheduler import LambdaLR
-from seperator.models.clap_encoder import CLAP_Encoder
+from separator.models.clap_encoder import CLAP_Encoder
 
 from huggingface_hub import PyTorchModelHubMixin
 
@@ -146,7 +146,7 @@ class AudioSep(pl.LightningModule, PyTorchModelHubMixin):
 
 def get_model_class(model_type):
     if model_type == 'ResUNet30':
-        from seperator.models.resunet import ResUNet30
+        from separator.models.resunet import ResUNet30
         return ResUNet30
 
     else:

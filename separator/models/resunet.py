@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torchlibrosa.stft import STFT, ISTFT, magphase
-from seperator.models.base import Base, init_layer, init_bn, act
+from separator.models.base import Base, init_layer, init_bn, act
 
 
 class FiLM(nn.Module):

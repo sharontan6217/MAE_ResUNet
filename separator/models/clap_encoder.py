@@ -2,16 +2,16 @@ import random
 import torch
 import torch.nn as nn
 import torchaudio
-from seperator.models.CLAP.open_clip import create_model
-from seperator.models.CLAP.training.data import get_audio_features
+from separator.models.CLAP.open_clip import create_model
+from separator.models.CLAP.training.data import get_audio_features
 from transformers import RobertaTokenizer
 
 
 class CLAP_Encoder(nn.Module):
     def __init__(
         self,
-        #pretrained_path='seperator/checkpoint/audiosep_base_4M_steps.ckpt',
-        pretrained_path='seperator/checkpoint/music_speech_audioset_epoch_15_esc_89.98.pt',
+        #pretrained_path='separator/checkpoint/audiosep_base_4M_steps.ckpt',
+        pretrained_path='separator/checkpoint/music_speech_audioset_epoch_15_esc_89.98.pt',
         sampling_rate=32000,
         amodel = "HTSAT-base",
     ):
