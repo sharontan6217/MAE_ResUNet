@@ -1,0 +1,29 @@
+---
+task_name: Tagging
+
+data:
+    datafiles:
+        - 'data/UrbanSound/metadata.csv'
+    sample_rate: 44100
+    target_rate: 16000
+    loudness_norm:
+        lower_db: -1.0
+        higher_db: 1.0
+    min_duration: 64000
+    duration: 5
+    number_of_top_classes: 20
+    hop: 1
+
+
+model:
+    feature_d : 768 * 5
+    norm_type: all
+    pooling_type: 'mean'
+    query_net: CLAP
+    model_type: M2D
+    input_size: [80, 208]
+    patch_size: [16, 16]
+    flat_features: False
+    weight_file: ''
+
+
